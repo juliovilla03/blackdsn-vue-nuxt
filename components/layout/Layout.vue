@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
 	<div id="main_layout" class="background-main">
-		<!-- <ModeColors /> -->
+		<ModeColors />
 		<div id="line_head"><span class="container"></span></div>
 		<div v-if="store.activeScrollbar" class="main-content p-relative dsn-main-scrollbar">
 			<div id="dsn-scrollbar">

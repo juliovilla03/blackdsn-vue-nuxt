@@ -24,9 +24,9 @@ const props = defineProps({ data: Array });
 		</div>
 	</div>
 </template>
-<style scoped>
+<!-- <style scoped>
 .service-item:first-child {
     /* border-left: 2px solid $border-color; // Descomenta y ajusta si necesitas un borde */
     padding-left: 100px; /* Ajusta el espaciado según sea necesario */
 }
-</style>
+</style> -->

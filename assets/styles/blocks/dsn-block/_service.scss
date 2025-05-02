@@ -29,7 +29,7 @@
 	.service-item {
 		@include media_768(min) {
 			&.border-left {
-				padding-left: 100px;
+				padding-left: 50px;
 			}
 		}
 		@include media_768() {

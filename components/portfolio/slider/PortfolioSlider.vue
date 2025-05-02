@@ -802,15 +802,15 @@ onMounted(() => {
 						<LinkLine v-if="props.linkLine" linkName="VIEW CASE" :linkTo="`${item.link}/${item.slug}`" parallax />
 
 						<LinkDefualt v-if="props.linkDefualt" class="swiper-animate-head" linkName="VER MÁS"
-							:linkTo="`${item.link}/${item.slug}`" parallax />
+							 parallax /> <!-- :linkTo="`${item.link}/${item.slug}`" -->
 					</div>
 				</div>
 			</div>
 			<div class="dsn-swiper-paginate">
 				<div ref="swiperPagination" class="swiper-pagination dsn-swiper-circle mr-30 ml-30 heading-color"></div>
 			</div>
-			<div class="control-nav w-100 d-flex dsn-container align-items-center justify-content-between">
-				<SliderPrev ref="prev" :data="props.data" :el="mainSlider" />
+			<div class="control-nav w-100 d-flex dsn-container align-items-center justify-content-center">
+				<!--<SliderPrev ref="prev" :data="props.data" :el="mainSlider" />-->
 				<div class="dsn-pagination p-relative d-flex align-items-end">
 					<span class="slider-current-index h2">{{
 						numberindex(store.slideCurrent)
@@ -819,7 +819,7 @@ onMounted(() => {
 						numberindex(store.countSlides - 1)
 					}}</span>
 				</div>
-				<SliderNext ref="next" :data="props.data" :el="mainSlider" />
+				<!--<SliderNext ref="next" :data="props.data" :el="mainSlider" /> -->
 			</div>
 		</div>
 	</header>

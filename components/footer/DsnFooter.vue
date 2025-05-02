@@ -2,43 +2,43 @@
 import { Animate } from "@/hooks/pluginanimations.js";
 import SiteLogo from "@/components/logo/SiteLogo.vue";
 import LinkDefualt from "@/components/links/LinkDefualt.vue";
-import SvgSeparator from "@/components/svg/SvgSeparator.vue";
-const props = defineProps({ light: Boolean,animate: Boolean,animateContent: { type: Boolean,default: true },containerContent: Boolean,});
+import SvgSeparator from "@/components/svg/SvgSeparator.vue";                    //poner como true para animacion
+const props = defineProps({ light: Boolean,animate: Boolean,animateContent: { type: Boolean,default: false },containerContent: Boolean,});
 const footer = ref(null);
 const footerContent = ref(null);
 const socialData = [
     {
         name: "Fb",
-        link: "",
+        link: "#",
         type: "fab",
         iconName: "facebook-f",
     },
     {
         name: "Tw",
-        link: "",
+        link: "#",
         type: "fab",
         iconName: "x-twitter",
     },
     {
         name: "In",
-        link: "",
+        link: "#",
         type: "fab",
         iconName: "linkedin-in",
     },
     {
         name: "Ins",
-        link: "",
+        link: "#",
         type: "fab",
         iconName: "instagram",
     },
 ];
 const footerLinks = [
-    { link: "/",name: "INICIO" },
-    { link: "/work/work-classic-2",name: "QUIÉNES SOMOS" },
-    { link: "/blog/stories",name: "SERVICIOS" },
-    { link: "/about-us",name: "CLIENTES" },
-    { link: "/contact",name: "PORTFOLIO" },
-    { link: "/contact",name: "CONTACTO" }
+    { link: "#",name: "INICIO" },/* / */
+    { link: "#",name: "QUIÉNES SOMOS" }, /* /work/work-classic-2 */
+    { link: "#",name: "SERVICIOS" }, /* /blog/stories */
+    { link: "#",name: "CLIENTES" }, /* /about-us */
+    { link: "#",name: "PORTFOLIO" }, /* /contact */
+    { link: "#",name: "CONTACTO" }
 ];
 
 onMounted(() => {
@@ -61,7 +61,7 @@ onMounted(() => {
                 </h2>
                 <LinkDefualt class="justify-content-center mt-30"
                     :linkClass="props.light ? 'background-main' : 'background-section'"
-                    :iconAwesome="['fas','angle-right']" popup linkName="CONTÁCTANOS" linkTo="/contact" parallax />
+                    :iconAwesome="['fas','angle-right']" popup linkName="CONTÁCTANOS" linkTo="#" parallax /> <!-- linkTo="/contact" -->
             </div>
             <div class="dsn-container pt-60">
                 <div class="d-grid grid-lg-4 grid-md-2">

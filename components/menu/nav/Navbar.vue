@@ -85,7 +85,7 @@ onMounted(() => {
 	<header id="site_menu_header" ref="nav"
 		:class="['site-header dsn-container',store.typeNave,props.hamburger ? 'dsn-hamburger' : null]">
 		<slot />
-		<div id="navbar_toggle" :class="['navbar-toggle',props.className]" @click="toggleClick" ref="navbarToggle">
+		<!-- <div id="navbar_toggle" :class="['navbar-toggle',props.className]" @click="toggleClick" ref="navbarToggle">
 			<div class="toggle-icon">
 				<div class="toggle-line" />
 				<div class="toggle-line" />
@@ -96,7 +96,7 @@ onMounted(() => {
 				<div class="text-open words chars splitting" data-splitting="chars">Open</div>
 				<div class="text-close words chars splitting" data-splitting="chars">Close</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="bg-load background-main" ref="backgroundMain" />
 		<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
 			class="bg-load dsn-svg-transition">

@@ -1,13 +1,31 @@
 <script setup>
 const socialData = [
-    { link: "",iconType: 'fab',icon: 'facebook-f',name: "Fb" },
-    { link: "",iconType: 'fab',icon: 'instagram',name: "In" },
-    { link: "",iconType: 'fab',icon: 'x-twitter',name: "Tw" },
-    { link: "",iconType: 'fab',icon: 'linkedin-in',name: "Linkedin" },
+    { link: "#",iconType: 'fab',icon: 'facebook-f',name: "Fb" },
+    { link: "#",iconType: 'fab',icon: 'instagram',name: "In" },
+    { link: "#",iconType: 'fab',icon: 'x-twitter',name: "Tw" },
+    { link: "#",iconType: 'fab',icon: 'linkedin-in',name: "Linkedin" },
 ];
 </script>
 
 <template>
+    <div class="social-side d-flex align-items-center flex-column justify-content-center">
+        <ul class="socials d-flex flex-column-reverse">
+            <li style="--dsn-index-animate" v-for="(item, index) in socialData" :key="index">
+                <NuxtLink 
+                    :href="item.link ? item.link : $route.path" 
+                    target="_blank" 
+                    @click="item.link === '#' && $event.preventDefault()"
+                >
+                    <font-awesome-icon :icon="[item.iconType, item.icon]" />
+                    <span>{{ item.name }}</span>
+                </NuxtLink>
+            </li>
+        </ul>
+        <div class="icon">FOLLOW US</div>
+    </div>
+</template>
+
+<!-- <template>     PARA CUANDO FUNCIONEN LOS LINKS, ELIMINAR EL TEMPLATE DE ARRIBA
     <div class="social-side d-flex align-items-center flex-column justify-content-center">
         <ul class="socials d-flex flex-column-reverse">
             <li style="--dsn-index-animate" v-for="(item,index) in socialData" :key="index">
@@ -19,7 +37,7 @@ const socialData = [
         </ul>
         <div class="icon">FOLLOW US</div>
     </div>
-</template>
+</template>-->
 
 <style lang="scss">
 @import "@/assets/styles/variables-site/colors";

@@ -33,7 +33,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 
 	<Layout>
 		<!-- ========== Slider Parallax ========== -->
-			<PortfolioSlider :data="data_Portf" setStyle="padding-h" contentStyle="end-between" hasDescription
+			<PortfolioSlider :data="data_Portf.slice(0, 4)" setStyle="padding-h" contentStyle="end-between" hasDescription
 				linkDefualt :webgel="true" :webgelOptions="{
 					displacement: 'images/displacement/7.jpg',
 					speedIn: 3.5,
@@ -52,17 +52,19 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 
 		<!-- ========== About Section One ========== -->
 		<AboutOne class="section-padding background-section" bgMask="background-main"
-			imageOneSrc="images/About/img1.png" imageTwoSrc="images/About/img2.png">
-			<template v-slot:moveTitle>¿QUIÉNES</template>
-			<template v-slot:centerTitle>SOMOS?</template>
+			imageOneSrc="images/About/aboutus.png">
+			<template v-slot:moveTitle>¿QUIÉNES </template>
+			<template v-slot:centerTitle> SOMOS?</template>
 			<template v-slot:description>
-				<p>Fabrika Global es un taller de fabricación especializado en el diseño y producción de piezas en libra de vidrio, estructuras metálicas y soluciones industriales.</p><br>
-				<p>Con más de 40 años de experiencia, hemos desarrollado proyectos en diversas industrias, incluyendo el entretenimiento, la arquitectura, la hotelería y el sector náutico.</p><br>	
-				<p>Fabrika Marine, nuestra división especializada en el sector náutico, se dedica a la fabricacióny reparación de embarcaciones, componentes marinos y accesorios en fibra de vidrio y aluminio. A través de procesos innovadores, garantizamos durabilidad, resistencia y acabados de primer nivel en cada proyecto.</p><br>
-				<p>Nuestro compromiso es ofrecer soluciones personalizadas, utilizando materiales de alta calidad y tecnología avanzada, adaptándonos a las necesidades específicas de cada cliente.</p>	
+				<div style="margin-bottom: 180px;">
+					<p>Fabrika Global es un taller de fabricación especializado en el diseño y producción de piezas en libra de vidrio, estructuras metálicas y soluciones industriales.</p><br>
+					<p>Con más de 40 años de experiencia, hemos desarrollado proyectos en diversas industrias, incluyendo el entretenimiento, la arquitectura, la hotelería y el sector náutico.</p><br>    
+					<p>Fabrika Marine, nuestra división especializada en el sector náutico, se dedica a la fabricacióny reparación de embarcaciones, componentes marinos y accesorios en fibra de vidrio y aluminio. A través de procesos innovadores, garantizamos durabilidad, resistencia y acabados de primer nivel en cada proyecto.</p><br>
+					<p>Nuestro compromiso es ofrecer soluciones personalizadas, utilizando materiales de alta calidad y tecnología avanzada, adaptándonos a las necesidades específicas de cada cliente.</p>    
+				</div>
 			</template>
 			<template v-slot:button>
-				<LinkAngle classColor="main" linkName="ABOUT US" linkTo="/about-us" />
+				<LinkAngle classColor="main" linkName="ABOUT US" linkTo="" /> <!-- linkTo="/about-us"  -->
 			</template>
 		</AboutOne>
 		<!-- ========== About Section One ========== -->
@@ -72,7 +74,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 			serviceInnerClass="border-style" iconsize="80px" masonry :center="false" haveButton>
 			<template v-slot:title>
 				<SectionTitleGrid grid btnBackground="background-section" beforeStyle="circle-before"
-					subTitle="divisiones" title="servicios<br><b>principales</b>" /> <!--  linkTo="/service" linkName="VIEW ALL SERVICES"-->
+					subTitle="divisiones" title="<span style='font-size: 36px;'>servicios</span><b style='font-size: 36px;'> principales</b>" />
 			</template>
 		</ServiceStyle>
 		<!-- ========== End Service ========== -->
@@ -91,7 +93,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 				<BoxInfoItem v-for="(item,index) in data_InBox" :key="index" :item="item.text" />
 			</BoxInfoList>
 			<LinkDefualt linkClass="background-main" :iconAwesome="['fas','angle-right']" popup linkName="VER MÁS"
-				linkTo="/portfolio/style-6/headphones" parallax />
+				linkTo="#" parallax /> <!-- linkTo="/portfolio/style-6/headphones" -->
 		</BoxInfo>
 		<!-- ========== End About Section One ========== -->
 
@@ -104,8 +106,8 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 			>
 			<template v-slot:title>
 				<SectionTitleGrid grid class="container" btnBackground="background-main" beforeStyle="circle-before"
-					subTitle="nuestro trabajo" title="<b>portfolio </b><br> de proyectos" linkTo="/work/work-list-1"
-					linkName="ver todo" />
+					subTitle="nuestro trabajo" title="<b>portfolio </b><br> de proyectos" linkTo="#"
+					linkName="ver todo" /> <!-- linkTo="/work/work-list-1" -->
 			</template>
 		</PortfolioSwiper>
 		<!-- ========== End Portfolio ========== -->
