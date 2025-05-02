@@ -8,8 +8,8 @@ const props = defineProps({ imageSrc: String,});
             <div class="left-box-image mb-section">
                 <div class="box-img w-100" data-dsn-animate='{
                         "trigger":{"scrub":"0","start":"-80%","end":"100%"},
-                        "from":{},
-                        "to":{"y":"120"},
+                        "from":{"y":"40"},
+                        "to":{"y":"-10"},
                         "responsive":["desktop"]}'>
                     <div class="img-box-parallax h-v-80 before-z-index w-100" data-overlay="1">
                         <NuxtImg format="webp" class="cover-bg-img" :src="imageSrc" alt="" />

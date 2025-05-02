@@ -31,7 +31,7 @@ definePageMeta({
 <template>
 
 	<Head>
-		<Title>Blackdsn</Title>
+		<Title>FABRIKA</Title>
 	</Head>
 
 	<Layout bodyStyle="bg-dots">

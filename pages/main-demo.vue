@@ -28,7 +28,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 <template>
 
 	<Head>
-		<Title>Home</Title>
+		<Title>FABRIKA</Title>
 	</Head>
 
 	<Layout>
@@ -82,7 +82,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 		<!-- ========== About Section One ========== -->
 		<BoxInfo imageSrc="images/BoxInfo/CarteraClientes.png">
 			<template v-slot:title>
-				<SectionTitle subTitle="cartera de clientes" title="<b>clientes</b> y<br>proyectos<br> destacados"
+				<SectionTitle subTitle="cartera de clientes" title="<b>clientes</b> y <br>proyectos<br> destacados"
 					beforeStyle="circle-before" :spaceDown="false" />
 			</template>
 			<template v-slot:string>
