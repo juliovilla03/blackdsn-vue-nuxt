@@ -24,7 +24,7 @@ const route = useRoute();
 onMounted(() => {
   // Solo redirigir si estamos en la página principal
   if (route.path === '/') {
-    router.push('/main-demo?mode=light');
+    router.push('/fabrika?mode=light');
   }
 });
 </script>

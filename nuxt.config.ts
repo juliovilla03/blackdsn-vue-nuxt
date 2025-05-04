@@ -33,7 +33,7 @@ export default defineNuxtConfig({
 		"/blog/**": { prerender: false },
 		"/work/category/**": { prerender: false },
 		"/main-demo?mode=dark": { prerender: false },
-		"/main-demo?mode=light": { prerender: false },
+		"/fabrika?mode=light": { prerender: false },
 		"/business?mode=dark": { prerender: false },
 		"/business?mode=light": { prerender: false },
 		"/architecture?mode=dark": { prerender: false },

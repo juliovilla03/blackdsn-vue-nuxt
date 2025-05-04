@@ -811,14 +811,14 @@ onMounted(() => {
 			</div>
 			<div class="control-nav w-100 d-flex dsn-container align-items-center justify-content-center">
 				<!--<SliderPrev ref="prev" :data="props.data" :el="mainSlider" />-->
-				<div class="dsn-pagination p-relative d-flex align-items-end">
+				<!--<div class="dsn-pagination p-relative d-flex align-items-end">
 					<span class="slider-current-index h2">{{
 						numberindex(store.slideCurrent)
 					}}</span>
 					<span class="sm-title-block">/ </span><span class="total sm-title-block">{{
 						numberindex(store.countSlides - 1)
 					}}</span>
-				</div>
+				</div>-->
 				<!--<SliderNext ref="next" :data="props.data" :el="mainSlider" /> -->
 			</div>
 		</div>
