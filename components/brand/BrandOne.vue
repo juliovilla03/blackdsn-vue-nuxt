@@ -24,7 +24,7 @@ const props = defineProps({ data: { type: Array, default: brandsImages }, boxSty
 					 key === 3 ? 'border-bottom' : null, key > 3 && key != data.length - 1 ? 'border-right' : null]"
 					v-for="(item, key) in props.data" :key="key">
 					<div class="brand-item-inner over-hidden p-relative">
-							<NuxtImg v-if="item.text" format="webp" height="40"  alt="LOGO" /> <!-- :src="item.text" -->
+							<NuxtImg v-if="item.imageSrc" format="webp" height="80" :src="item.imageSrc" alt="LOGO" /> <!--  -->
 					</div>
 				</div>
 			</div>
