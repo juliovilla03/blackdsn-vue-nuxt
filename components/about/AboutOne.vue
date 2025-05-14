@@ -93,8 +93,9 @@ const props = defineProps({
 			}
 
 			.title {
-				font-size: 30px;
+				font-size: 55px;
 				line-height: inherit;
+				margin-left: 40px;
 
 				span {
 					display: inline-block;
@@ -104,10 +105,19 @@ const props = defineProps({
 			}
 		}
 
-		.bg-mask,
-		.box-img {
+		
+
+		.bg-mask {
 			display: none;
 		}
+	}
+	
+	.caja-bottom{
+		margin-bottom: 180px;
+
+		@include media_768() {
+    	margin-bottom: 0px; // Nuevo valor para teléfonos
+  		}
 	}
 }
 </style>

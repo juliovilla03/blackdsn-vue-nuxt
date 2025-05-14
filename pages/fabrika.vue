@@ -56,7 +56,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 			<template v-slot:moveTitle>¿QUIÉNES </template>
 			<template v-slot:centerTitle> SOMOS?</template>
 			<template v-slot:description>
-				<div style="margin-bottom: 180px;">
+				<div class="caja-bottom">
 					<p>Fabrika Global es un taller de fabricación especializado en el diseño y producción de piezas en libra de vidrio, estructuras metálicas y soluciones industriales.</p><br>
 					<p>Con más de 40 años de experiencia, hemos desarrollado proyectos en diversas industrias, incluyendo el entretenimiento, la arquitectura, la hotelería y el sector náutico.</p><br>    
 					<p>Fabrika Marine, nuestra división especializada en el sector náutico, se dedica a la fabricacióny reparación de embarcaciones, componentes marinos y accesorios en fibra de vidrio y aluminio. A través de procesos innovadores, garantizamos durabilidad, resistencia y acabados de primer nivel en cada proyecto.</p><br>

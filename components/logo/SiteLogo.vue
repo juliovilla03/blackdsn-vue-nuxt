@@ -6,7 +6,7 @@ const props = defineProps({ click: Function, name: String });
 <template>
 	<div class="main-logo main-brand" @click="props.click()">
 		<NuxtLink to="#" v-if="store.colorPage == 'v-dark'">
-			<NuxtImg class="logo-light" src="images/logoFK.png" alt="logo" width="auto" height="200"></NuxtImg>
+			<NuxtImg class="logo-light" src="images/logoFK2.png" alt="logo" width="auto" height="50"></NuxtImg>
 		</NuxtLink>
 		<NuxtLink to="#" v-if="store.colorPage == 'v-light'">
 			<NuxtImg format="webp" class="logo-light" src="images/logoFK.png" alt="logo" width="auto" height="40"></NuxtImg>
