@@ -64,7 +64,7 @@ import SiteLogo from "@/components/logo/SiteLogo.vue";
 				</div>
 			</template>
 			<template v-slot:button>
-				<LinkAngle classColor="main" linkName="ABOUT US" linkTo="" /> <!-- linkTo="/about-us"  -->
+				<LinkAngle classColor="main" linkName="ABOUT US" linkTo="" style="visibility: hidden"/> <!-- linkTo="/about-us"  -->
 			</template>
 		</AboutOne>
 		<!-- ========== About Section One ========== -->
