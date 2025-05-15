@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 		head: {
 			title: 'Blackdsn',
 			meta: [{ name: 'description',content: 'Blackdsn Nuxt-js Template' }],
-			link: [{ rel: 'icon',type: 'image/x-icon',href: '/images/Group.png' }],
+			link: [{ rel: 'icon',type: 'image/x-icon',href: '/images/Favicon_1.png' }],
 			script: [{ src: '/js/threejs.min.js',body: true,async: true,defer: true }],
 		}
 	},
