@@ -8,7 +8,7 @@
                 <h2 class="title-h2">
                     <slot name="form_title" />
                 </h2>
-                <p class="mt-10">Fill fields and find approximate your repair</p>
+                <p class="mt-10">¡CONSTRUYAMOS ALGO INCREÍBLE JUNTOS!</p>
                 <div class="dsn-form mt-20 form-box d-flex flex-column">
                     <form id="contact-form" class="form w-100" method="post" action="contact.php"
                         data-toggle="validator">

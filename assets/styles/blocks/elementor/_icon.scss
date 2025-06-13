@@ -1,7 +1,7 @@
 .dsn-icon {
 	i {
 		font-size: var(--dsn-icon-size, 20px);
-		color: var(--dsn-color-icon, $theme-color);
+		color: var(--dsn-color-icon, $theme-color2);
 	}
 
 	svg,
@@ -11,7 +11,7 @@
 
 		&,
 		path {
-			fill: var(--dsn-color-icon, $theme-color);
+			fill: var(--dsn-color-icon, $theme-color2);
 		}
 	}
 
@@ -21,7 +21,7 @@
 }
 
 .dsn-icon-theme-color {
-	--dsn-color-icon: #{$theme-color};
+	--dsn-color-icon: #{$theme-color2};
 }
 
 .dsn-icon-heading-color {

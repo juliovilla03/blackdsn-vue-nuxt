@@ -41,7 +41,7 @@ const props = defineProps({
 					<div class="post-title-info">
 						<div class="post-meta max-w750">
 							<MetaPost className="mb-10" v-if="item.categories" :category="item.categories"
-								catLink="/work/category" separate=" &" />
+								catLink="#" separate=" &" /> <!-- /work/category -->
 						</div>
 						<h2 v-if="item.title" :class="['post-title',props.postTitleClass]">
 							<NuxtLink class="effect-ajax" :to="`${item.link}/${item.slug}`">{{

@@ -782,11 +782,15 @@ onMounted(() => {
 						<div
 							:class="['p-relative head-meta swiper-animate-head d-flex mb-20',setContentStyle().metaClass]">
 							<div class="slide-metas circle-before metas mb-10">
-								<NuxtLink v-if="item.categories.length > 0" class="heading-color"
+								<!-- <NuxtLink v-if="item.categories.length > 0" class="heading-color"
 									:to="`/work/category/${cat.toString().trim().toLowerCase()}`" data-separator=" -"
 									v-for="(cat,key) in item.categories" :key="key">
 									<span class="words chars splitting" data-splitting="chars">{{ cat }}</span>
-								</NuxtLink>
+								</NuxtLink> -->
+								<span v-if="item.categories.length > 0" class="heading-color"
+  									data-separator=" -" v-for="(cat,key) in item.categories" :key="key">
+  									<span class="words chars splitting" data-splitting="chars">{{ cat }}</span>
+								</span>
 							</div>
 						</div>
 						<h2 class="title has-box-mod p-relative">

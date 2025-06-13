@@ -61,7 +61,7 @@ onMounted(() => {
                 </h2>
                 <LinkDefualt class="justify-content-center mt-30"
                     :linkClass="props.light ? 'background-main' : 'background-section'"
-                    :iconAwesome="['fas','angle-right']" popup linkName="CONTÁCTANOS" linkTo="#" parallax /> <!-- linkTo="/contact" -->
+                    :iconAwesome="['fas','angle-right']" popup linkName="CONTÁCTANOS" linkTo="/contact" parallax /> <!-- linkTo="/contact" -->
             </div>
             <div class="dsn-container pt-60">
                 <div class="d-grid grid-lg-4 grid-md-2">

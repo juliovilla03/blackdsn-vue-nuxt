@@ -13,19 +13,18 @@ import DsnFooter from '@/components/footer/DsnFooter.vue';
         <!-- ========== Header Normal=============== -->
         <HeaderNormal contentClass="container" subTitle="" :linkTo="$route.path" linkName="See More Works">
             <template v-slot:title>
-                Look around you<br> everything is changing.
+                ¿TIENES UN PROYECTO EN MENTE?
             </template>
             <template v-slot:string>
-                What if the time has come for you to change? Starting a collaboration is easy! Order a
-                free consultation or call back. We are always in touch and happy to cooperate with you
+                Conversemos sobre cómo podemos diseñar y fabricar la solución a tu medida. Contáctanos y hagámoslo realidad.
             </template>
         </HeaderNormal>
         <!-- ========== End Header Normal ========== -->
 
         <!-- ========== Contact  =================== -->
         <contactForm>
-            <template v-slot:form_title>IF YOU HAVE QUESTIONS PLEASE <br>CONTACT US</template>
-            <template v-slot:address_title>Head Office:</template>
+            <template v-slot:form_title>SI TIENES UNA PREGUNTA POR FAVOR CONTÁCTANOS</template>
+            <template v-slot:address_title>HEAD OFFICE:</template>
             <template v-slot:address>El-Mahalla El-Kubra37<br>1776 Damietta Egypt</template>
             <template v-slot:phones_title>Phones:</template>
             <template v-slot:phones>
@@ -39,8 +38,12 @@ import DsnFooter from '@/components/footer/DsnFooter.vue';
         <!-- ========== End Contact  =============== -->
 
         <!-- ========== Map  ======================= -->
-        <DsnMap mapKey="AIzaSyDMyAS2jdzj-vdgBIFaIStYOWJtSlghndg" :zoom="10" height="80vh"
-            :defaultCenter="{ lat: 30.0489206, lng: 31.258553 }" />
+        <DsnMap
+            mapKey="AIzaSyDMyAS2jdzj-vdgBIFaIStYOWJtSlghndg"
+            :zoom="12"
+            height="80vh"
+            :defaultCenter="{ lat: 13.730089, lng: -89.210031 }"
+        />
         <!-- ========== End Map  =================== -->
 
         <!-- ========== Footer ===================== -->
