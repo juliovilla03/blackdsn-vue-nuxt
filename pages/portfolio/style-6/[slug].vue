@@ -1,7 +1,8 @@
 <script setup>
 import { nextProject } from "@/hooks/plugin.js"
 import { Fancybox } from "@fancyapps/ui";
-import data_Portf from "@/api/portfolio/portfolio.json";
+import data_Portf1 from "@/api/portfolio/portfolio.json";
+import data_Portf2 from "@/api/portfolio/portfolio2.json";
 import InfoProject from "@/components/portfolio/info-project/InfoProject.vue";
 import InfoProjectItem from "@/components/portfolio/info-project/InfoProjectItem.vue";
 import ParallaxImageTwo from "@/components/images/ParallaxImageTwo.vue";
@@ -10,8 +11,10 @@ import BoxInfoFull from "@/components/box-info/BoxInfoFull.vue";
 import ParagraphBox from "@/components/string/ParagraphBox.vue";
 import NextProject from "@/components/next/NextProject.vue";
 definePageMeta({ documentDriven: false });
-const { slug } = useRoute().params
-const item = await data_Portf.find(item => item.slug === slug)
+
+const { style, slug } = useRoute().params
+const allProjects = [...data_Portf1, ...data_Portf2]
+const item = await allProjects.find(item => item.slug === slug)
 if (!item) {
     throw createError({
         fatal: true, statusCode: 404,
@@ -38,7 +41,6 @@ onBeforeUnmount(() => Fancybox.destroy());
 </script>
 
 <template>
-
     <Head>
         <Title>Project</Title>
     </Head>
@@ -52,10 +54,10 @@ onBeforeUnmount(() => Fancybox.destroy());
         <InfoProject id="info">
             <template v-slot:about>
                 <h2 class="title-h2 dsn-up" data-fade-up>
-                    {{ item.about[0].title }}
+                    {{ item.about[0]?.title }}
                 </h2>
                 <p class="max-w750 mt-30 dsn-up" data-fade-up>
-                    {{ item.about[0].text[0] }}
+                    {{ item.about[0]?.text?.[0] }}
                 </p>
             </template>
             <InfoProjectItem v-for="(info, index) in item.infoProject" :key="index" :title="info.title"
@@ -64,34 +66,34 @@ onBeforeUnmount(() => Fancybox.destroy());
         <!-- ========== End Info Project  ========== -->
 
         <!-- ========== Parallax Image With Popup  ========== -->
-        <ParallaxImageTwo :src="item.images[1].src" :caption="item.images[1].name" fancybox="_1" />
+        <ParallaxImageTwo v-if="item.images?.[1]" :src="item.images[1].src" :caption="item.images[1].name" fancybox="_1" />
         <!-- ========== End Parallax Image With Popup  ========== -->
 
         <!-- ========== Paragraph  ========== -->
-        <ParagraphBox>{{ item.about[1].text[0] }}</ParagraphBox>
+        <ParagraphBox v-if="item.about?.[1]?.text?.[0]">{{ item.about[1].text[0] }}</ParagraphBox>
         <!-- ========== End Paragraph  ========== -->
 
         <!-- ========== Image Popup  ========== -->
-        <ImagePopup class="dsn-container" :imageList="[item.images[2], item.images[3]]" />
+        <ImagePopup v-if="item.images?.[2] && item.images?.[3]" class="dsn-container" :imageList="[item.images[2], item.images[3]]" />
         <!-- ========== End Image Popup  ========== -->
 
         <!-- ========== Parallax Image With Popup  ========== -->
-        <ParallaxImageTwo :src="item.images[4].src" :caption="item.images[4].name" fancybox="_1" />
+        <ParallaxImageTwo v-if="item.images?.[4]" :src="item.images[4].src" :caption="item.images[4].name" fancybox="_1" />
         <!-- ========== End Parallax Image With Popup  ========== -->
 
         <!-- ========== Image Popup  ========== -->
-        <ImagePopup class="dsn-container" :imageList="[item.images[4], item.images[5]]" />
+        <ImagePopup v-if="item.images?.[4] && item.images?.[5]" class="dsn-container" :imageList="[item.images[4], item.images[5]]" />
         <!-- ========== End Image Popup  ========== -->
 
         <!-- ========== Paragraph  ========== -->
-        <ParagraphBox>
+        <ParagraphBox v-if="item.about?.[1]?.text?.[1]">
             {{ item.about[1].text[1] }}
             <h5 class="title-block dsn-up mt-15">Richard Price</h5>
         </ParagraphBox>
         <!-- ========== End Paragraph  ========== -->
 
         <!-- ========== Next Project  ========== -->
-        <NextProject light :next="nextProject(item.id, data_Portf)" />
+        <NextProject light :next="nextProject(item.id, allProjects)" />
         <!-- ========== End Next Project  ========== -->
     </Layout>
 </template>
